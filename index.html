@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+	       	<meta charset="utf-8">
+	        <title>Untitled Document</title>
+	        <link rel = "stylesheet" type = "text/css" href = "stylesheet.css">
+	        <script>
+				function initMap() {
+					var myLatLng1 = {lat:42.37361, lng: -71.11056};
+					var myLatLng2 = {lat: 42.3964, lng: -71.1359};
+					var myLatLng3 = {lat: 42.3736, lng: -71.1190};
+					var myLatLng4 = {lat: 42.37417,lng: -71.11056};
+					var myLatLng5 = {lat: 42.3683, lng: -71.0825};
+					var myLatLng6 = {lat: 42.375522, lng: -71.114202};
+					
+					var mapDiv = document.getElementById('map');
+					var map = new google.maps.Map(mapDiv, {
+						center: {lat: 0, lng: 0},
+						zoom: 2
+					});
+					var marker1 = new google.maps.Marker({
+						position: myLatLng1,
+						map: map,
+						title: 'The Port'
+					  });
+				    var marker2 = new google.maps.Marker({
+						position: myLatLng2,
+						map: map,
+						title: 'North Camdridge'
+				    });
+					var marker3 = new google.maps.Marker({
+						position: myLatLng3,
+						map: map,
+						title: 'Harvard square'
+				    });
+					var marker4 = new google.maps.Marker({
+						position: myLatLng4,
+						map: map,
+						title: 'Cambridge public library'
+				    });
+					var marker5 = new google.maps.Marker({
+						position: myLatLng5,
+						map: map,
+						title: 'East Cambridge'
+				    });
+					var marker6 = new google.maps.Marker({
+						position: myLatLng6,
+						map: map,
+						title: 'Harvard Museum'
+				    });
+					
+				}
+    		</script>
+    		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW0oOpPB4q5lf9vVg5BLhgCcANsLQepCwcallback=initMap"
+  async defer>
+    		</script>
+	</head>
+	<body>
+    		<div id = "header">
+        		<h1>My Portfolio</h1> 
+		</div> 
+   		<div class = "nav_bar"> 
+        		<ol> 
+        			<li><a href = "index.html">Homepage</a></li> 
+			        <li><a href = "about_me.html">About Me</a></li> 
+			        <li><a href = "achievements.html">Achievements</a></li> 
+			        <li><a href = "travels.html">Travels</a></li> 
+			        <li><a href = "photos.html">Photos</a></li> 
+       			</ol> 
+        	</div>
+        	<div class = "container">
+        		<div id ="map"></div>
+        	</div>
+	</body>
+</html>
